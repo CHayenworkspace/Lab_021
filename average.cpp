@@ -6,16 +6,15 @@ int main (int argc, char* argv[]){
         cout<< "Please input numbers to find average.\n";
     }else{
     int i = 0;
-    int count = 0;
     int y = argc;
     double x = 0;
-    if(i <= y){
-        double num = atoi(argv[i+1]);
+    while(i < y){
+        double num = atoi(argv[i]);
         x = x + num;
-        count++;
+        i++;
     }
     cout << "---------------------------------\n";
-    cout <<"Average of "<< count <<" numbers = "<< x/count << "\n";
+    cout <<"Average of "<< i-1 <<" numbers = "<< x/(i-1) << "\n";
     cout << "---------------------------------";
     return 0;}
 }
